@@ -27,17 +27,17 @@ export class ToDoListComponent implements OnInit {
     });
   }
 
-  onAdd(itemTitle) {
-    this.todoService.addTitle(itemTitle.value);
-    itemTitle.value = null;
+  adding(task) {
+    this.todoService.addTask(task.value);
+    task.value = null;
   }
 
   alterCheck($key: string, isChecked) {
-    this.todoService.checkOrUnCheckTitle($key, !isChecked);
+    this.todoService.checkOrUnCheckTask($key, !isChecked);
   }
 
-  onDelete($key: string) {
-    this.todoService.removeTitle($key);
+  deleting($key: string) {
+    this.todoService.removeTask($key);
   }
 
 }

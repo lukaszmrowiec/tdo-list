@@ -12,18 +12,18 @@ export class TodoService {
     return this.toDoList;
   }
 
-  addTitle(title: string) {
+  addTask(title: string) {
     this.toDoList.push({
       title: title,
       isChecked: false
     });
   }
 
-  checkOrUnCheckTitle($key: string, flag: boolean) {
+  checkOrUnCheckTask($key: string, flag: boolean) {
     this.toDoList.update($key, {isChecked: flag});
   }
 
-  removeTitle($key: string) {
+  removeTask($key: string) {
     this.toDoList.remove($key);
   }
 

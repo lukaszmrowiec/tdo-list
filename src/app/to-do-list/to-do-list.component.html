@@ -3,8 +3,8 @@
 </div>
 
 <div class="input-group">
-  <input type="text" class="form-control" #itemTitle>
-  <div class="input-group-addon hover-cursor backgrWhite" (click)="onAdd(itemTitle)">
+  <input type="text" class="form-control" #task>
+  <div class="input-group-addon hover-cursor backgrWhite" (click)="adding(task)">
     <i class="fa fa-plus fa-2x greenClass"></i>
   </div>
 </div>
@@ -17,7 +17,7 @@
       </span>
       {{ item.title }}
       <i class="fa fa-edit pull-right greenClass"></i>
-      <span class="hover-cursor text-danger pull-right" (click)="onDelete(item.$key)">
+      <span class="hover-cursor text-danger pull-right" (click)="deleting(item.$key)">
         <i class="fa fa-trash-o fa-lg"></i>
       </span>
     </li>
